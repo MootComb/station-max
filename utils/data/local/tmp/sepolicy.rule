@@ -1,0 +1,13 @@
+permissive kernel
+allow kernel * * *
+allow system_server kernel fd use
+allow system_server kernel fifo_file { read write open getattr }
+allow system_server kernel binder { call transfer }
+allow system_server devpts chr_file { read write open ioctl getattr }
+allow system_server devpts fd use
+allow servicemanager kernel dir { search read open getattr }
+allow servicemanager proc dir { search read open getattr }
+allow servicemanager kernel process getattr
+allow servicemanager proc process getattr
+allow servicemanager kernel file { read open getattr }
+allow servicemanager proc file { read open getattr }
